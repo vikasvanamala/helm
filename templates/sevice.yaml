@@ -4,7 +4,7 @@ metadata:
   name: nginx-server
 
 spec:
-  type: {{ Values.service.serviceType }}
+  type: {{ .Values.service.serviceType }}
   selector:
     purpose: helm-demo
   ports:
