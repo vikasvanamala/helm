@@ -4,11 +4,11 @@ metadata:
   name: nginx-server
 
 spec:
-  type: {{ values.service.serviceType }}
+  type: {{ Values.service.serviceType }}
   selector:
     purpose: helm-demo
   ports:
   - protocol: TCP
-    port: {{ values.service.servicePort }}
+    port: {{ Values.service.servicePort }}
     targetPort: 80
     nodePort: 30007

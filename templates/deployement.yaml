@@ -5,7 +5,7 @@ metadta:
   labels:
     purpose: helm-demo
 spec:
-  replicas: {{ .values.deployment.replicas }}
+  replicas: {{ .Values.deployment.replicas }}
   selector:
     matchLabels:
       purpose: helm-demo
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:{{ .values.deplyment.imageVersion }}
+        image: nginx:{{ .Values.deployment.imageVersion }}
     
     
   
