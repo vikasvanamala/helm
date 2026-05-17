@@ -1,5 +1,0 @@
-apiVersion: v2
-name: nginx                   # chart name
-version: 1.0.1                # chart version
-descrption: upgrading to stable pearl version 
-appVersion: stable-peral      # this is application-version
