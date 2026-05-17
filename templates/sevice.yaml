@@ -9,6 +9,6 @@ spec:
     purpose: helm-demo
   ports:
   - protocol: TCP
-    port: {{ Values.service.servicePort }}
+    port: {{ .Values.service.servicePort }}
     targetPort: 80
     nodePort: 30007
