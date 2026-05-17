@@ -1,0 +1,14 @@
+apiVersion: v2
+kind: Service
+metadata:
+  name: nginx-server
+
+spec:
+  type: {{ values.service.serviceType }}
+  selector:
+    purpose: helm-demo
+  ports:
+  - protocol: TCP
+    port: {{ values.service.servicePort }}
+    targetPort: 80
+    nodePort: 30007

@@ -1,0 +1,22 @@
+apiVersion: v2
+kind: Deployment
+metadta:
+  name: nginx
+  labels:
+    purpose: helm-demo
+spec:
+  replicas: {{ .values.deployment.replicas }}
+  selector:
+    matchLabels:
+      purpose: helm-demo
+  template:
+    metadata:
+      labels:
+        purpose: helm-demo
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:{{ .values.deplyment.imageVersion }}
+    
+    
+  
